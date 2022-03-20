@@ -11,7 +11,7 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 /*
- * Created by ParkSuHo by 2022/03/20.
+ * Created by ParkSuHo on 2022/03/20.
  */
 @Getter
 @MappedSuperclass

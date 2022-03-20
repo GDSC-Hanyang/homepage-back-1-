@@ -1,10 +1,31 @@
 spring:
+  host: http://localhost:8080
+  jwt:
+    secret: jwt
+  datasource:
+    url: jdbc:h2:../test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: test@gmail.com
+    password: test
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
   servlet:
     multipart:
       max-file-size: 5MB
       max-request-size: 5MB
   jpa:
     hibernate:
+      ddl-auto: create
       use-new-id-generator-mappings: false
   mvc:
     throw-exception-if-no-handler-found: true
