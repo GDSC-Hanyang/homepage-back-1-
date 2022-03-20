@@ -9,6 +9,7 @@ import java.util.Optional;
  * Created by ParkSuHo on 2022/03/20.
  */
 @Repository
-public interface MemberRepository extends JpaRepository<Member, Long> {
-    Optional<Member> findByEmail(String email);
+public interface RefreshTokenRepository extends JpaRepository<RefreshToken, Long> {
+    Optional<RefreshToken> findByUserId(Long userId);
+    Void deleteByUserId(Long userId);
 }
